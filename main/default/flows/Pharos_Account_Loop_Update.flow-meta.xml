@@ -131,7 +131,7 @@
         <inputParameters>
             <name>level</name>
             <value>
-                <stringValue>FINER</stringValue>
+                <stringValue>WARNING</stringValue>
             </value>
         </inputParameters>
         <inputParameters>
@@ -546,7 +546,7 @@
         <inputParameters>
             <name>level</name>
             <value>
-                <stringValue>FINER</stringValue>
+                <stringValue>FINE</stringValue>
             </value>
         </inputParameters>
         <inputParameters>
@@ -629,7 +629,7 @@
         <inputParameters>
             <name>level</name>
             <value>
-                <stringValue>FINER</stringValue>
+                <stringValue>FINEST</stringValue>
             </value>
         </inputParameters>
         <inputParameters>
