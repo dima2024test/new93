@@ -150,30 +150,6 @@
     </processMetadataValues>
     <processType>Flow</processType>
     <recordCreates>
-        <description>Description 2</description>
-        <name>Create_Account</name>
-        <label>Create Account</label>
-        <locationX>0</locationX>
-        <locationY>0</locationY>
-        <connector>
-            <targetReference>Get_Account_with_AR_55</targetReference>
-        </connector>
-        <inputAssignments>
-            <field>AnnualRevenue</field>
-            <value>
-                <numberValue>55.0</numberValue>
-            </value>
-        </inputAssignments>
-        <inputAssignments>
-            <field>Name</field>
-            <value>
-                <elementReference>Accont_Name</elementReference>
-            </value>
-        </inputAssignments>
-        <object>Account</object>
-        <storeOutputAutomatically>true</storeOutputAutomatically>
-    </recordCreates>
-    <recordCreates>
         <description>Description 4</description>
         <name>Create_Contact</name>
         <label>Create Contact</label>
@@ -377,7 +353,7 @@
         <allowFinish>true</allowFinish>
         <allowPause>true</allowPause>
         <connector>
-            <targetReference>Create_Account</targetReference>
+            <targetReference>Get_Account_with_AR_55</targetReference>
         </connector>
         <fields>
             <name>Accont_Name</name>
