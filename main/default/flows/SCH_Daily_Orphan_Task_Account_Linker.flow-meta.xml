@@ -3,8 +3,8 @@
     <actionCalls>
         <name>Send_Summary_Email</name>
         <label>Send Summary Email</label>
-        <locationX>578</locationX>
-        <locationY>1358</locationY>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
         <actionName>emailSimple</actionName>
         <actionType>emailSimple</actionType>
         <faultConnector>
@@ -35,8 +35,8 @@
     <assignments>
         <name>Asg_Link</name>
         <label>Asg Link</label>
-        <locationX>50</locationX>
-        <locationY>1358</locationY>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
         <assignmentItems>
             <assignToReference>varTask.WhatId</assignToReference>
             <operator>Assign</operator>
@@ -65,8 +65,8 @@
     <assignments>
         <name>Asg_Skip</name>
         <label>Asg Skip</label>
-        <locationX>314</locationX>
-        <locationY>1358</locationY>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
         <assignmentItems>
             <assignToReference>varSkipped</assignToReference>
             <operator>Add</operator>
@@ -81,8 +81,8 @@
     <assignments>
         <name>Asg_Total</name>
         <label>Asg Total</label>
-        <locationX>50</locationX>
-        <locationY>350</locationY>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
         <assignmentItems>
             <assignToReference>varTotal</assignToReference>
             <operator>AssignCount</operator>
@@ -98,8 +98,8 @@
         <name>Sort_Newest_First</name>
         <elementSubtype>SortCollectionProcessor</elementSubtype>
         <label>Sort Newest First</label>
-        <locationX>50</locationX>
-        <locationY>686</locationY>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
         <collectionProcessorType>SortCollectionProcessor</collectionProcessorType>
         <collectionReference>Get_Orphan_Tasks</collectionReference>
         <connector>
@@ -115,8 +115,8 @@
     <decisions>
         <name>Dec_Any_Orphans</name>
         <label>Dec Any Orphans</label>
-        <locationX>50</locationX>
-        <locationY>518</locationY>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
         <defaultConnectorLabel>None Found</defaultConnectorLabel>
         <rules>
             <name>Has_Orphans</name>
@@ -137,8 +137,8 @@
     <decisions>
         <name>Dec_Contact_Has_Account</name>
         <label>Dec Contact Has Account</label>
-        <locationX>50</locationX>
-        <locationY>1190</locationY>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
         <defaultConnector>
             <targetReference>Asg_Skip</targetReference>
         </defaultConnector>
@@ -176,8 +176,8 @@
     <decisions>
         <name>Dec_Has_Links</name>
         <label>Dec Has Links</label>
-        <locationX>314</locationX>
-        <locationY>1022</locationY>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
         <defaultConnector>
             <targetReference>Create_Summary_Task</targetReference>
         </defaultConnector>
@@ -204,8 +204,8 @@
     <loops>
         <name>Loop_Tasks</name>
         <label>Loop Tasks</label>
-        <locationX>50</locationX>
-        <locationY>854</locationY>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
         <assignNextValueToReference>varTask</assignNextValueToReference>
         <collectionReference>Get_Orphan_Tasks</collectionReference>
         <iterationOrder>Asc</iterationOrder>
@@ -225,7 +225,7 @@
     <processMetadataValues>
         <name>CanvasMode</name>
         <value>
-            <stringValue>FREE_FORM_CANVAS</stringValue>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
         </value>
     </processMetadataValues>
     <processMetadataValues>
@@ -238,8 +238,8 @@
     <recordCreates>
         <name>Create_Summary_Task</name>
         <label>Create Summary Task</label>
-        <locationX>578</locationX>
-        <locationY>1190</locationY>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
         <connector>
             <targetReference>Send_Summary_Email</targetReference>
         </connector>
@@ -282,8 +282,8 @@
     <recordLookups>
         <name>Get_Orphan_Tasks</name>
         <label>Get Orphan Tasks</label>
-        <locationX>50</locationX>
-        <locationY>182</locationY>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
         <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
         <connector>
             <targetReference>Asg_Total</targetReference>
@@ -320,8 +320,8 @@
     <recordLookups>
         <name>Get_Who_Contact</name>
         <label>Get Who Contact</label>
-        <locationX>50</locationX>
-        <locationY>1022</locationY>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
         <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
         <connector>
             <targetReference>Dec_Contact_Has_Account</targetReference>
@@ -344,8 +344,8 @@
     <recordUpdates>
         <name>Update_Tasks</name>
         <label>Update Tasks</label>
-        <locationX>314</locationX>
-        <locationY>1190</locationY>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
         <connector>
             <targetReference>Create_Summary_Task</targetReference>
         </connector>
@@ -355,7 +355,7 @@
         <inputReference>colTasksToUpdate</inputReference>
     </recordUpdates>
     <start>
-        <locationX>50</locationX>
+        <locationX>0</locationX>
         <locationY>0</locationY>
         <connector>
             <targetReference>Get_Orphan_Tasks</targetReference>
@@ -371,8 +371,8 @@
     <subflows>
         <name>Log_Fault</name>
         <label>Log Fault</label>
-        <locationX>314</locationX>
-        <locationY>350</locationY>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
         <flowName>AUT_Log_Flow_Error</flowName>
         <inputAssignments>
             <name>inFlowName</name>

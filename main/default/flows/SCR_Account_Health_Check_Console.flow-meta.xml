@@ -3,8 +3,8 @@
     <actionCalls>
         <name>Email_Owner</name>
         <label>Email Owner</label>
-        <locationX>314</locationX>
-        <locationY>1862</locationY>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
         <actionName>emailSimple</actionName>
         <actionType>emailSimple</actionType>
         <connector>
@@ -38,8 +38,8 @@
     <assignments>
         <name>Asg_Case_Count</name>
         <label>Asg Case Count</label>
-        <locationX>50</locationX>
-        <locationY>1022</locationY>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
         <assignmentItems>
             <assignToReference>varOpenCases</assignToReference>
             <operator>AssignCount</operator>
@@ -54,8 +54,8 @@
     <assignments>
         <name>Asg_High_Case</name>
         <label>Asg High Case</label>
-        <locationX>50</locationX>
-        <locationY>1526</locationY>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
         <assignmentItems>
             <assignToReference>varHighCases</assignToReference>
             <operator>Add</operator>
@@ -101,8 +101,8 @@
     <decisions>
         <name>Dec_High_Priority</name>
         <label>Dec High Priority</label>
-        <locationX>50</locationX>
-        <locationY>1358</locationY>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
         <defaultConnector>
             <targetReference>Loop_Cases</targetReference>
         </defaultConnector>
@@ -126,8 +126,8 @@
     <decisions>
         <name>Dec_Next_Action</name>
         <label>Dec Next Action</label>
-        <locationX>314</locationX>
-        <locationY>1526</locationY>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
         <defaultConnector>
             <targetReference>Scr_Done</targetReference>
         </defaultConnector>
@@ -194,8 +194,8 @@
     <loops>
         <name>Loop_Cases</name>
         <label>Loop Cases</label>
-        <locationX>50</locationX>
-        <locationY>1190</locationY>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
         <assignNextValueToReference>varCase</assignNextValueToReference>
         <collectionReference>Get_Open_Cases</collectionReference>
         <iterationOrder>Asc</iterationOrder>
@@ -215,7 +215,7 @@
     <processMetadataValues>
         <name>CanvasMode</name>
         <value>
-            <stringValue>FREE_FORM_CANVAS</stringValue>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
         </value>
     </processMetadataValues>
     <processMetadataValues>
@@ -228,8 +228,8 @@
     <recordCreates>
         <name>Create_Action_Plan</name>
         <label>Create Action Plan</label>
-        <locationX>50</locationX>
-        <locationY>1862</locationY>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
         <connector>
             <targetReference>Scr_Done</targetReference>
         </connector>
@@ -284,8 +284,8 @@
     <recordDeletes>
         <name>Delete_Old_Plans</name>
         <label>Delete Old Plans</label>
-        <locationX>50</locationX>
-        <locationY>1694</locationY>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
         <connector>
             <targetReference>Create_Action_Plan</targetReference>
         </connector>
@@ -319,8 +319,8 @@
     <recordLookups>
         <name>Get_Account</name>
         <label>Get Account</label>
-        <locationX>50</locationX>
-        <locationY>350</locationY>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
         <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
         <connector>
             <targetReference>Sub_Health_Score</targetReference>
@@ -343,8 +343,8 @@
     <recordLookups>
         <name>Get_Open_Cases</name>
         <label>Get Open Cases</label>
-        <locationX>50</locationX>
-        <locationY>854</locationY>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
         <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
         <connector>
             <targetReference>Asg_Case_Count</targetReference>
@@ -374,8 +374,8 @@
     <recordLookups>
         <name>Get_Owner</name>
         <label>Get Owner</label>
-        <locationX>314</locationX>
-        <locationY>1694</locationY>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
         <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
         <connector>
             <targetReference>Email_Owner</targetReference>
@@ -398,8 +398,8 @@
     <screens>
         <name>Scr_Done</name>
         <label>Scr Done</label>
-        <locationX>578</locationX>
-        <locationY>1694</locationY>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
         <allowBack>false</allowBack>
         <allowFinish>true</allowFinish>
         <allowPause>false</allowPause>
@@ -414,8 +414,8 @@
     <screens>
         <name>Scr_Error</name>
         <label>Scr Error</label>
-        <locationX>314</locationX>
-        <locationY>686</locationY>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
         <allowBack>false</allowBack>
         <allowFinish>true</allowFinish>
         <allowPause>false</allowPause>
@@ -430,8 +430,8 @@
     <screens>
         <name>Scr_Health_Results</name>
         <label>Scr Health Results</label>
-        <locationX>314</locationX>
-        <locationY>1358</locationY>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
         <allowBack>false</allowBack>
         <allowFinish>true</allowFinish>
         <allowPause>false</allowPause>
@@ -476,8 +476,8 @@
     <screens>
         <name>Scr_Select_Account</name>
         <label>Scr Select Account</label>
-        <locationX>50</locationX>
-        <locationY>182</locationY>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
         <allowBack>false</allowBack>
         <allowFinish>true</allowFinish>
         <allowPause>false</allowPause>
@@ -496,7 +496,7 @@
         <showHeader>true</showHeader>
     </screens>
     <start>
-        <locationX>50</locationX>
+        <locationX>0</locationX>
         <locationY>0</locationY>
         <connector>
             <targetReference>Scr_Select_Account</targetReference>
@@ -506,8 +506,8 @@
     <subflows>
         <name>Sub_Health_Score</name>
         <label>Sub Health Score</label>
-        <locationX>50</locationX>
-        <locationY>518</locationY>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
         <connector>
             <targetReference>Sub_Pipeline</targetReference>
         </connector>
@@ -530,8 +530,8 @@
     <subflows>
         <name>Sub_Log_Fault</name>
         <label>Sub Log Fault</label>
-        <locationX>314</locationX>
-        <locationY>518</locationY>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
         <connector>
             <targetReference>Scr_Error</targetReference>
         </connector>
@@ -564,8 +564,8 @@
     <subflows>
         <name>Sub_Pipeline</name>
         <label>Sub Pipeline</label>
-        <locationX>50</locationX>
-        <locationY>686</locationY>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
         <connector>
             <targetReference>Get_Open_Cases</targetReference>
         </connector>

@@ -4,8 +4,8 @@
     <assignments>
         <name>Asg_Overlap</name>
         <label>Asg Overlap</label>
-        <locationX>50</locationX>
-        <locationY>1022</locationY>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
         <assignmentItems>
             <assignToReference>varOverlaps</assignToReference>
             <operator>Add</operator>
@@ -43,8 +43,8 @@
     <decisions>
         <name>Dec_Activate</name>
         <label>Dec Activate</label>
-        <locationX>314</locationX>
-        <locationY>1190</locationY>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
         <defaultConnector>
             <targetReference>Create_Countersign_Task</targetReference>
         </defaultConnector>
@@ -68,8 +68,8 @@
     <decisions>
         <name>Dec_Has_Overlap</name>
         <label>Dec Has Overlap</label>
-        <locationX>314</locationX>
-        <locationY>854</locationY>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
         <defaultConnector>
             <targetReference>Create_Contract</targetReference>
         </defaultConnector>
@@ -93,8 +93,8 @@
     <decisions>
         <name>Dec_Overlaps</name>
         <label>Dec Overlaps</label>
-        <locationX>50</locationX>
-        <locationY>854</locationY>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
         <defaultConnector>
             <targetReference>Loop_Contracts</targetReference>
         </defaultConnector>
@@ -118,8 +118,8 @@
     <decisions>
         <name>Dec_Proceed</name>
         <label>Dec Proceed</label>
-        <locationX>50</locationX>
-        <locationY>1190</locationY>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
         <defaultConnector>
             <targetReference>Scr_Cancelled</targetReference>
         </defaultConnector>
@@ -189,8 +189,8 @@
     <loops>
         <name>Loop_Contracts</name>
         <label>Loop Contracts</label>
-        <locationX>50</locationX>
-        <locationY>686</locationY>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
         <assignNextValueToReference>varContract</assignNextValueToReference>
         <collectionReference>Get_Active_Contracts</collectionReference>
         <iterationOrder>Asc</iterationOrder>
@@ -210,7 +210,7 @@
     <processMetadataValues>
         <name>CanvasMode</name>
         <value>
-            <stringValue>FREE_FORM_CANVAS</stringValue>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
         </value>
     </processMetadataValues>
     <processMetadataValues>
@@ -223,8 +223,8 @@
     <recordCreates>
         <name>Create_Contract</name>
         <label>Create Contract</label>
-        <locationX>578</locationX>
-        <locationY>1022</locationY>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
         <assignRecordIdToReference>varContractId</assignRecordIdToReference>
         <connector>
             <targetReference>Dec_Activate</targetReference>
@@ -285,8 +285,8 @@
     <recordCreates>
         <name>Create_Countersign_Task</name>
         <label>Create Countersign Task</label>
-        <locationX>314</locationX>
-        <locationY>1358</locationY>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
         <connector>
             <targetReference>Scr_Done</targetReference>
         </connector>
@@ -335,8 +335,8 @@
     <recordLookups>
         <name>Get_Active_Contracts</name>
         <label>Get Active Contracts</label>
-        <locationX>50</locationX>
-        <locationY>518</locationY>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
         <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
         <connector>
             <targetReference>Loop_Contracts</targetReference>
@@ -368,8 +368,8 @@
     <recordUpdates>
         <name>Update_Activate_Contract</name>
         <label>Update Activate Contract</label>
-        <locationX>50</locationX>
-        <locationY>1358</locationY>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
         <connector>
             <targetReference>Create_Countersign_Task</targetReference>
         </connector>
@@ -395,8 +395,8 @@
     <screens>
         <name>Scr_Cancelled</name>
         <label>Scr Cancelled</label>
-        <locationX>578</locationX>
-        <locationY>1358</locationY>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
         <allowBack>false</allowBack>
         <allowFinish>true</allowFinish>
         <allowPause>false</allowPause>
@@ -411,8 +411,8 @@
     <screens>
         <name>Scr_Contract_Terms</name>
         <label>Scr Contract Terms</label>
-        <locationX>50</locationX>
-        <locationY>350</locationY>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
         <allowBack>true</allowBack>
         <allowFinish>true</allowFinish>
         <allowPause>false</allowPause>
@@ -477,8 +477,8 @@
     <screens>
         <name>Scr_Done</name>
         <label>Scr Done</label>
-        <locationX>50</locationX>
-        <locationY>1526</locationY>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
         <allowBack>false</allowBack>
         <allowFinish>true</allowFinish>
         <allowPause>false</allowPause>
@@ -493,8 +493,8 @@
     <screens>
         <name>Scr_Error</name>
         <label>Scr Error</label>
-        <locationX>578</locationX>
-        <locationY>854</locationY>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
         <allowBack>false</allowBack>
         <allowFinish>true</allowFinish>
         <allowPause>false</allowPause>
@@ -509,8 +509,8 @@
     <screens>
         <name>Scr_Overlap_Warning</name>
         <label>Scr Overlap Warning</label>
-        <locationX>314</locationX>
-        <locationY>1022</locationY>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
         <allowBack>true</allowBack>
         <allowFinish>true</allowFinish>
         <allowPause>false</allowPause>
@@ -538,8 +538,8 @@
     <screens>
         <name>Scr_Select_Account</name>
         <label>Scr Select Account</label>
-        <locationX>50</locationX>
-        <locationY>182</locationY>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
         <allowBack>false</allowBack>
         <allowFinish>true</allowFinish>
         <allowPause>false</allowPause>
@@ -563,7 +563,7 @@
         <showHeader>true</showHeader>
     </screens>
     <start>
-        <locationX>50</locationX>
+        <locationX>0</locationX>
         <locationY>0</locationY>
         <connector>
             <targetReference>Scr_Select_Account</targetReference>
@@ -573,8 +573,8 @@
     <subflows>
         <name>Sub_Log_Fault</name>
         <label>Sub Log Fault</label>
-        <locationX>314</locationX>
-        <locationY>686</locationY>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
         <connector>
             <targetReference>Scr_Error</targetReference>
         </connector>

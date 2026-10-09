@@ -4,8 +4,8 @@
     <decisions>
         <name>Dec_Contact_Found</name>
         <label>Dec Contact Found</label>
-        <locationX>50</locationX>
-        <locationY>686</locationY>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
         <defaultConnector>
             <targetReference>Scr_Not_Found</targetReference>
         </defaultConnector>
@@ -29,8 +29,8 @@
     <decisions>
         <name>Dec_Email_Changed</name>
         <label>Dec Email Changed</label>
-        <locationX>50</locationX>
-        <locationY>1358</locationY>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
         <defaultConnector>
             <targetReference>Scr_Done</targetReference>
         </defaultConnector>
@@ -91,7 +91,7 @@
     <processMetadataValues>
         <name>CanvasMode</name>
         <value>
-            <stringValue>FREE_FORM_CANVAS</stringValue>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
         </value>
     </processMetadataValues>
     <processMetadataValues>
@@ -104,8 +104,8 @@
     <recordCreates>
         <name>Create_Change_Log</name>
         <label>Create Change Log</label>
-        <locationX>50</locationX>
-        <locationY>1526</locationY>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
         <connector>
             <targetReference>Scr_Done</targetReference>
         </connector>
@@ -154,8 +154,8 @@
     <recordLookups>
         <name>Get_Contact</name>
         <label>Get Contact</label>
-        <locationX>50</locationX>
-        <locationY>518</locationY>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
         <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
         <connector>
             <targetReference>Dec_Contact_Found</targetReference>
@@ -178,8 +178,8 @@
     <recordUpdates>
         <name>Update_Contact</name>
         <label>Update Contact</label>
-        <locationX>50</locationX>
-        <locationY>1190</locationY>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
         <connector>
             <targetReference>Dec_Email_Changed</targetReference>
         </connector>
@@ -217,8 +217,8 @@
     <screens>
         <name>Scr_Done</name>
         <label>Scr Done</label>
-        <locationX>314</locationX>
-        <locationY>1526</locationY>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
         <allowBack>false</allowBack>
         <allowFinish>true</allowFinish>
         <allowPause>false</allowPause>
@@ -233,8 +233,8 @@
     <screens>
         <name>Scr_Edit_Contact</name>
         <label>Scr Edit Contact</label>
-        <locationX>50</locationX>
-        <locationY>1022</locationY>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
         <allowBack>false</allowBack>
         <allowFinish>true</allowFinish>
         <allowPause>false</allowPause>
@@ -282,8 +282,8 @@
     <screens>
         <name>Scr_Error</name>
         <label>Scr Error</label>
-        <locationX>578</locationX>
-        <locationY>854</locationY>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
         <allowBack>false</allowBack>
         <allowFinish>true</allowFinish>
         <allowPause>false</allowPause>
@@ -298,8 +298,8 @@
     <screens>
         <name>Scr_Not_Found</name>
         <label>Scr Not Found</label>
-        <locationX>314</locationX>
-        <locationY>854</locationY>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
         <allowBack>true</allowBack>
         <allowFinish>true</allowFinish>
         <allowPause>false</allowPause>
@@ -314,8 +314,8 @@
     <screens>
         <name>Scr_Select_Account</name>
         <label>Scr Select Account</label>
-        <locationX>50</locationX>
-        <locationY>182</locationY>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
         <allowBack>false</allowBack>
         <allowFinish>true</allowFinish>
         <allowPause>false</allowPause>
@@ -336,8 +336,8 @@
     <screens>
         <name>Scr_Select_Contact</name>
         <label>Scr Select Contact</label>
-        <locationX>50</locationX>
-        <locationY>350</locationY>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
         <allowBack>true</allowBack>
         <allowFinish>true</allowFinish>
         <allowPause>false</allowPause>
@@ -356,7 +356,7 @@
         <showHeader>true</showHeader>
     </screens>
     <start>
-        <locationX>50</locationX>
+        <locationX>0</locationX>
         <locationY>0</locationY>
         <connector>
             <targetReference>Scr_Select_Account</targetReference>
@@ -366,8 +366,8 @@
     <subflows>
         <name>Sub_Activity_Snapshot</name>
         <label>Sub Activity Snapshot</label>
-        <locationX>50</locationX>
-        <locationY>854</locationY>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
         <connector>
             <targetReference>Scr_Edit_Contact</targetReference>
         </connector>
@@ -390,8 +390,8 @@
     <subflows>
         <name>Sub_Log_Fault</name>
         <label>Sub Log Fault</label>
-        <locationX>314</locationX>
-        <locationY>686</locationY>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
         <connector>
             <targetReference>Scr_Error</targetReference>
         </connector>

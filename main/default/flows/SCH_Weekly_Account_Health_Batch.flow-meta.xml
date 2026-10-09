@@ -4,8 +4,8 @@
     <assignments>
         <name>Asg_Old_Case_Count</name>
         <label>Asg Old Case Count</label>
-        <locationX>314</locationX>
-        <locationY>1022</locationY>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
         <assignmentItems>
             <assignToReference>varOldCaseCount</assignToReference>
             <operator>AssignCount</operator>
@@ -20,8 +20,8 @@
     <assignments>
         <name>Asg_Previous_Rating</name>
         <label>Asg Previous Rating</label>
-        <locationX>50</locationX>
-        <locationY>182</locationY>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
         <assignmentItems>
             <assignToReference>varPreviousRating</assignToReference>
             <operator>Assign</operator>
@@ -37,8 +37,8 @@
         <name>Filter_Old_Cases</name>
         <elementSubtype>FilterCollectionProcessor</elementSubtype>
         <label>Filter Old Cases</label>
-        <locationX>314</locationX>
-        <locationY>854</locationY>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
         <assignNextValueToReference>currentItem_Filter_Old_Cases</assignNextValueToReference>
         <collectionProcessorType>FilterCollectionProcessor</collectionProcessorType>
         <collectionReference>Get_Open_Cases</collectionReference>
@@ -57,8 +57,8 @@
     <decisions>
         <name>Dec_Rating_Shift</name>
         <label>Dec Rating Shift</label>
-        <locationX>50</locationX>
-        <locationY>518</locationY>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
         <defaultConnector>
             <targetReference>Get_Open_Cases</targetReference>
         </defaultConnector>
@@ -111,8 +111,8 @@
     <decisions>
         <name>Dec_Too_Many_Old_Cases</name>
         <label>Dec Too Many Old Cases</label>
-        <locationX>50</locationX>
-        <locationY>1190</locationY>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
         <defaultConnectorLabel>OK</defaultConnectorLabel>
         <rules>
             <name>Too_Many</name>
@@ -133,8 +133,8 @@
     <decisions>
         <name>Dec_Upsell_Exists</name>
         <label>Dec Upsell Exists</label>
-        <locationX>50</locationX>
-        <locationY>854</locationY>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
         <defaultConnector>
             <targetReference>Create_Upsell_Opportunity</targetReference>
         </defaultConnector>
@@ -182,7 +182,7 @@
     <processMetadataValues>
         <name>CanvasMode</name>
         <value>
-            <stringValue>FREE_FORM_CANVAS</stringValue>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
         </value>
     </processMetadataValues>
     <processMetadataValues>
@@ -195,8 +195,8 @@
     <recordCreates>
         <name>Create_Case_Review_Task</name>
         <label>Create Case Review Task</label>
-        <locationX>50</locationX>
-        <locationY>1358</locationY>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
         <faultConnector>
             <targetReference>Log_Fault</targetReference>
         </faultConnector>
@@ -236,8 +236,8 @@
     <recordCreates>
         <name>Create_Risk_Task</name>
         <label>Create Risk Task</label>
-        <locationX>50</locationX>
-        <locationY>686</locationY>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
         <connector>
             <targetReference>Get_Open_Cases</targetReference>
         </connector>
@@ -280,8 +280,8 @@
     <recordCreates>
         <name>Create_Upsell_Opportunity</name>
         <label>Create Upsell Opportunity</label>
-        <locationX>50</locationX>
-        <locationY>1022</locationY>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
         <connector>
             <targetReference>Get_Open_Cases</targetReference>
         </connector>
@@ -324,8 +324,8 @@
     <recordLookups>
         <name>Get_Existing_Upsell</name>
         <label>Get Existing Upsell</label>
-        <locationX>314</locationX>
-        <locationY>686</locationY>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
         <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
         <connector>
             <targetReference>Dec_Upsell_Exists</targetReference>
@@ -362,8 +362,8 @@
     <recordLookups>
         <name>Get_Open_Cases</name>
         <label>Get Open Cases</label>
-        <locationX>578</locationX>
-        <locationY>686</locationY>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
         <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
         <connector>
             <targetReference>Filter_Old_Cases</targetReference>
@@ -391,7 +391,7 @@
         <storeOutputAutomatically>true</storeOutputAutomatically>
     </recordLookups>
     <start>
-        <locationX>50</locationX>
+        <locationX>0</locationX>
         <locationY>0</locationY>
         <connector>
             <targetReference>Asg_Previous_Rating</targetReference>
@@ -416,8 +416,8 @@
     <subflows>
         <name>Log_Fault</name>
         <label>Log Fault</label>
-        <locationX>578</locationX>
-        <locationY>854</locationY>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
         <flowName>AUT_Log_Flow_Error</flowName>
         <inputAssignments>
             <name>inFlowName</name>
@@ -447,8 +447,8 @@
     <subflows>
         <name>Sub_Calculate_Health</name>
         <label>Sub Calculate Health</label>
-        <locationX>50</locationX>
-        <locationY>350</locationY>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
         <connector>
             <targetReference>Dec_Rating_Shift</targetReference>
         </connector>

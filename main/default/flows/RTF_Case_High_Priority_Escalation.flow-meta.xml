@@ -4,9 +4,12 @@
         <name>Send_Escalation_Email</name>
         <label>Send Escalation Email</label>
         <locationX>314</locationX>
-        <locationY>1526</locationY>
+        <locationY>1656</locationY>
         <actionName>emailSimple</actionName>
         <actionType>emailSimple</actionType>
+        <connector>
+            <targetReference>Create_Opp</targetReference>
+        </connector>
         <faultConnector>
             <targetReference>Log_Fault</targetReference>
         </faultConnector>
@@ -35,8 +38,8 @@
     <assignments>
         <name>Asg_Append_Case</name>
         <label>Asg Append Case</label>
-        <locationX>50</locationX>
-        <locationY>1526</locationY>
+        <locationX>402</locationX>
+        <locationY>1464</locationY>
         <assignmentItems>
             <assignToReference>varCaseList</assignToReference>
             <operator>Add</operator>
@@ -58,8 +61,8 @@
     <assignments>
         <name>Asg_Contact_Info</name>
         <label>Asg Contact Info</label>
-        <locationX>50</locationX>
-        <locationY>518</locationY>
+        <locationX>182</locationX>
+        <locationY>492</locationY>
         <assignmentItems>
             <assignToReference>varContactName</assignToReference>
             <operator>Assign</operator>
@@ -75,8 +78,8 @@
         <name>Sort_Cases_By_Age</name>
         <elementSubtype>SortCollectionProcessor</elementSubtype>
         <label>Sort Cases By Age</label>
-        <locationX>50</locationX>
-        <locationY>1190</locationY>
+        <locationX>314</locationX>
+        <locationY>1248</locationY>
         <collectionProcessorType>SortCollectionProcessor</collectionProcessorType>
         <collectionReference>Get_Related_Open_Cases</collectionReference>
         <connector>
@@ -92,8 +95,8 @@
     <decisions>
         <name>Dec_Contact_Found</name>
         <label>Dec Contact Found</label>
-        <locationX>50</locationX>
-        <locationY>350</locationY>
+        <locationX>314</locationX>
+        <locationY>384</locationY>
         <defaultConnector>
             <targetReference>Get_Account</targetReference>
         </defaultConnector>
@@ -117,8 +120,8 @@
     <decisions>
         <name>Dec_Key_Account</name>
         <label>Dec Key Account</label>
-        <locationX>50</locationX>
-        <locationY>686</locationY>
+        <locationX>314</locationX>
+        <locationY>792</locationY>
         <defaultConnector>
             <targetReference>Create_Support_Task</targetReference>
         </defaultConnector>
@@ -149,8 +152,8 @@
     <decisions>
         <name>Dec_Still_Open</name>
         <label>Dec Still Open</label>
-        <locationX>314</locationX>
-        <locationY>350</locationY>
+        <locationX>2558</locationX>
+        <locationY>384</locationY>
         <defaultConnectorLabel>Handled</defaultConnectorLabel>
         <rules>
             <name>Still_Open</name>
@@ -186,8 +189,8 @@
     <loops>
         <name>Loop_Related_Cases</name>
         <label>Loop Related Cases</label>
-        <locationX>50</locationX>
-        <locationY>1358</locationY>
+        <locationX>314</locationX>
+        <locationY>1356</locationY>
         <collectionReference>Get_Related_Open_Cases</collectionReference>
         <iterationOrder>Asc</iterationOrder>
         <nextValueConnector>
@@ -206,7 +209,7 @@
     <processMetadataValues>
         <name>CanvasMode</name>
         <value>
-            <stringValue>FREE_FORM_CANVAS</stringValue>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
         </value>
     </processMetadataValues>
     <processMetadataValues>
@@ -220,7 +223,7 @@
         <name>Create_Account_Manager_Task</name>
         <label>Create Account Manager Task</label>
         <locationX>50</locationX>
-        <locationY>854</locationY>
+        <locationY>900</locationY>
         <connector>
             <targetReference>Get_Related_Open_Cases</targetReference>
         </connector>
@@ -267,10 +270,27 @@
         <storeOutputAutomatically>true</storeOutputAutomatically>
     </recordCreates>
     <recordCreates>
+        <name>Create_Opp</name>
+        <label>Create Opp</label>
+        <locationX>314</locationX>
+        <locationY>1764</locationY>
+        <inputAssignments>
+            <field>CloseDate</field>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Name</field>
+        </inputAssignments>
+        <inputAssignments>
+            <field>StageName</field>
+        </inputAssignments>
+        <object>Opportunity</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordCreates>
+    <recordCreates>
         <name>Create_SLA_Breach_Task</name>
         <label>Create SLA Breach Task</label>
-        <locationX>314</locationX>
-        <locationY>686</locationY>
+        <locationX>2162</locationX>
+        <locationY>600</locationY>
         <faultConnector>
             <targetReference>Log_Fault</targetReference>
         </faultConnector>
@@ -316,8 +336,8 @@
     <recordCreates>
         <name>Create_Support_Task</name>
         <label>Create Support Task</label>
-        <locationX>314</locationX>
-        <locationY>854</locationY>
+        <locationX>578</locationX>
+        <locationY>900</locationY>
         <connector>
             <targetReference>Get_Related_Open_Cases</targetReference>
         </connector>
@@ -367,7 +387,7 @@
         <name>Get_Account</name>
         <label>Get Account</label>
         <locationX>314</locationX>
-        <locationY>518</locationY>
+        <locationY>684</locationY>
         <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
         <connector>
             <targetReference>Dec_Key_Account</targetReference>
@@ -390,8 +410,8 @@
     <recordLookups>
         <name>Get_Case_Status</name>
         <label>Get Case Status</label>
-        <locationX>314</locationX>
-        <locationY>182</locationY>
+        <locationX>2558</locationX>
+        <locationY>276</locationY>
         <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
         <connector>
             <targetReference>Dec_Still_Open</targetReference>
@@ -414,8 +434,8 @@
     <recordLookups>
         <name>Get_Contact</name>
         <label>Get Contact</label>
-        <locationX>50</locationX>
-        <locationY>182</locationY>
+        <locationX>314</locationX>
+        <locationY>276</locationY>
         <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
         <connector>
             <targetReference>Dec_Contact_Found</targetReference>
@@ -438,8 +458,8 @@
     <recordLookups>
         <name>Get_Related_Open_Cases</name>
         <label>Get Related Open Cases</label>
-        <locationX>50</locationX>
-        <locationY>1022</locationY>
+        <locationX>314</locationX>
+        <locationY>1140</locationY>
         <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
         <connector>
             <targetReference>Sort_Cases_By_Age</targetReference>
@@ -483,8 +503,8 @@
     <recordUpdates>
         <name>Update_Case_Escalated</name>
         <label>Update Case Escalated</label>
-        <locationX>578</locationX>
-        <locationY>518</locationY>
+        <locationX>2162</locationX>
+        <locationY>492</locationY>
         <connector>
             <targetReference>Create_SLA_Breach_Task</targetReference>
         </connector>
@@ -508,7 +528,7 @@
         <object>Case</object>
     </recordUpdates>
     <start>
-        <locationX>50</locationX>
+        <locationX>1310</locationX>
         <locationY>0</locationY>
         <connector>
             <targetReference>Get_Contact</targetReference>
@@ -540,8 +560,8 @@
     <subflows>
         <name>Log_Fault</name>
         <label>Log Fault</label>
-        <locationX>578</locationX>
-        <locationY>350</locationY>
+        <locationX>1898</locationX>
+        <locationY>384</locationY>
         <flowName>AUT_Log_Flow_Error</flowName>
         <inputAssignments>
             <name>inFlowName</name>

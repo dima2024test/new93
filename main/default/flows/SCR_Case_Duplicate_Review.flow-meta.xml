@@ -4,8 +4,8 @@
     <assignments>
         <name>Asg_Dup_Line</name>
         <label>Asg Dup Line</label>
-        <locationX>50</locationX>
-        <locationY>1526</locationY>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
         <assignmentItems>
             <assignToReference>varDupList</assignToReference>
             <operator>Add</operator>
@@ -20,8 +20,8 @@
     <assignments>
         <name>Asg_Likely_Count</name>
         <label>Asg Likely Count</label>
-        <locationX>50</locationX>
-        <locationY>1022</locationY>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
         <assignmentItems>
             <assignToReference>varLikelyCount</assignToReference>
             <operator>AssignCount</operator>
@@ -61,8 +61,8 @@
         <name>Filter_Likely</name>
         <elementSubtype>FilterCollectionProcessor</elementSubtype>
         <label>Filter Likely</label>
-        <locationX>50</locationX>
-        <locationY>854</locationY>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
         <assignNextValueToReference>currentItem_Filter_Likely</assignNextValueToReference>
         <collectionProcessorType>FilterCollectionProcessor</collectionProcessorType>
         <collectionReference>Get_Candidates</collectionReference>
@@ -95,8 +95,8 @@
     <decisions>
         <name>Dec_Any_Likely</name>
         <label>Dec Any Likely</label>
-        <locationX>50</locationX>
-        <locationY>1190</locationY>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
         <defaultConnector>
             <targetReference>Scr_No_Duplicates</targetReference>
         </defaultConnector>
@@ -120,8 +120,8 @@
     <decisions>
         <name>Dec_Has_Account</name>
         <label>Dec Has Account</label>
-        <locationX>50</locationX>
-        <locationY>518</locationY>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
         <defaultConnector>
             <targetReference>Scr_No_Duplicates</targetReference>
         </defaultConnector>
@@ -145,8 +145,8 @@
     <decisions>
         <name>Dec_Review_Action</name>
         <label>Dec Review Action</label>
-        <locationX>50</locationX>
-        <locationY>1694</locationY>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
         <defaultConnector>
             <targetReference>Create_Review_Task</targetReference>
         </defaultConnector>
@@ -243,8 +243,8 @@
     <loops>
         <name>Loop_Likely</name>
         <label>Loop Likely</label>
-        <locationX>50</locationX>
-        <locationY>1358</locationY>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
         <assignNextValueToReference>varDup</assignNextValueToReference>
         <collectionReference>Filter_Likely</collectionReference>
         <iterationOrder>Asc</iterationOrder>
@@ -264,7 +264,7 @@
     <processMetadataValues>
         <name>CanvasMode</name>
         <value>
-            <stringValue>FREE_FORM_CANVAS</stringValue>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
         </value>
     </processMetadataValues>
     <processMetadataValues>
@@ -277,8 +277,8 @@
     <recordCreates>
         <name>Create_Review_Task</name>
         <label>Create Review Task</label>
-        <locationX>578</locationX>
-        <locationY>1862</locationY>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
         <connector>
             <targetReference>Scr_Done</targetReference>
         </connector>
@@ -327,8 +327,8 @@
     <recordLookups>
         <name>Get_Candidates</name>
         <label>Get Candidates</label>
-        <locationX>50</locationX>
-        <locationY>686</locationY>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
         <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
         <connector>
             <targetReference>Filter_Likely</targetReference>
@@ -367,8 +367,8 @@
     <recordLookups>
         <name>Get_Case</name>
         <label>Get Case</label>
-        <locationX>50</locationX>
-        <locationY>350</locationY>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
         <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
         <connector>
             <targetReference>Dec_Has_Account</targetReference>
@@ -391,8 +391,8 @@
     <recordUpdates>
         <name>Update_Close_Duplicate</name>
         <label>Update Close Duplicate</label>
-        <locationX>50</locationX>
-        <locationY>1862</locationY>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
         <connector>
             <targetReference>Create_Review_Task</targetReference>
         </connector>
@@ -424,8 +424,8 @@
     <recordUpdates>
         <name>Update_Link_Duplicate</name>
         <label>Update Link Duplicate</label>
-        <locationX>314</locationX>
-        <locationY>1862</locationY>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
         <connector>
             <targetReference>Create_Review_Task</targetReference>
         </connector>
@@ -451,8 +451,8 @@
     <screens>
         <name>Scr_Done</name>
         <label>Scr Done</label>
-        <locationX>50</locationX>
-        <locationY>2030</locationY>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
         <allowBack>false</allowBack>
         <allowFinish>true</allowFinish>
         <allowPause>false</allowPause>
@@ -467,8 +467,8 @@
     <screens>
         <name>Scr_Error</name>
         <label>Scr Error</label>
-        <locationX>578</locationX>
-        <locationY>686</locationY>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
         <allowBack>false</allowBack>
         <allowFinish>true</allowFinish>
         <allowPause>false</allowPause>
@@ -483,8 +483,8 @@
     <screens>
         <name>Scr_No_Duplicates</name>
         <label>Scr No Duplicates</label>
-        <locationX>314</locationX>
-        <locationY>686</locationY>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
         <allowBack>true</allowBack>
         <allowFinish>true</allowFinish>
         <allowPause>false</allowPause>
@@ -499,8 +499,8 @@
     <screens>
         <name>Scr_Review</name>
         <label>Scr Review</label>
-        <locationX>314</locationX>
-        <locationY>1526</locationY>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
         <allowBack>true</allowBack>
         <allowFinish>true</allowFinish>
         <allowPause>false</allowPause>
@@ -543,8 +543,8 @@
     <screens>
         <name>Scr_Select_Case</name>
         <label>Scr Select Case</label>
-        <locationX>50</locationX>
-        <locationY>182</locationY>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
         <allowBack>false</allowBack>
         <allowFinish>true</allowFinish>
         <allowPause>false</allowPause>
@@ -568,7 +568,7 @@
         <showHeader>true</showHeader>
     </screens>
     <start>
-        <locationX>50</locationX>
+        <locationX>0</locationX>
         <locationY>0</locationY>
         <connector>
             <targetReference>Scr_Select_Case</targetReference>
@@ -578,8 +578,8 @@
     <subflows>
         <name>Sub_Log_Fault</name>
         <label>Sub Log Fault</label>
-        <locationX>314</locationX>
-        <locationY>518</locationY>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
         <connector>
             <targetReference>Scr_Error</targetReference>
         </connector>
