@@ -4,8 +4,8 @@
     <assignments>
         <name>Asg_Active</name>
         <label>Asg Active</label>
-        <locationX>578</locationX>
-        <locationY>1190</locationY>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
         <assignmentItems>
             <assignToReference>outActiveCount</assignToReference>
             <operator>Add</operator>
@@ -20,8 +20,8 @@
     <assignments>
         <name>Asg_Expired</name>
         <label>Asg Expired</label>
-        <locationX>50</locationX>
-        <locationY>1190</locationY>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
         <assignmentItems>
             <assignToReference>outExpiredCount</assignToReference>
             <operator>Add</operator>
@@ -36,8 +36,8 @@
     <assignments>
         <name>Asg_Expiring</name>
         <label>Asg Expiring</label>
-        <locationX>314</locationX>
-        <locationY>1190</locationY>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
         <assignmentItems>
             <assignToReference>outExpiringCount</assignToReference>
             <operator>Add</operator>
@@ -59,8 +59,8 @@
     <assignments>
         <name>Asg_Not_Found</name>
         <label>Asg Not Found</label>
-        <locationX>314</locationX>
-        <locationY>518</locationY>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
         <assignmentItems>
             <assignToReference>outExpiredCount</assignToReference>
             <operator>Assign</operator>
@@ -80,8 +80,8 @@
         <name>Sort_By_End_Date</name>
         <elementSubtype>SortCollectionProcessor</elementSubtype>
         <label>Sort By End Date</label>
-        <locationX>50</locationX>
-        <locationY>686</locationY>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
         <collectionProcessorType>SortCollectionProcessor</collectionProcessorType>
         <collectionReference>Get_Assets</collectionReference>
         <connector>
@@ -96,8 +96,8 @@
     <decisions>
         <name>Dec_Account_Found</name>
         <label>Dec Account Found</label>
-        <locationX>50</locationX>
-        <locationY>350</locationY>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
         <defaultConnector>
             <targetReference>Asg_Not_Found</targetReference>
         </defaultConnector>
@@ -121,8 +121,8 @@
     <decisions>
         <name>Dec_Create_Task</name>
         <label>Dec Create Task</label>
-        <locationX>314</locationX>
-        <locationY>1022</locationY>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
         <defaultConnectorLabel>No Task</defaultConnectorLabel>
         <rules>
             <name>Task_Requested</name>
@@ -150,8 +150,8 @@
     <decisions>
         <name>Dec_Warranty_State</name>
         <label>Dec Warranty State</label>
-        <locationX>50</locationX>
-        <locationY>1022</locationY>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
         <defaultConnector>
             <targetReference>Asg_Active</targetReference>
         </defaultConnector>
@@ -198,8 +198,8 @@
     <loops>
         <name>Loop_Assets</name>
         <label>Loop Assets</label>
-        <locationX>50</locationX>
-        <locationY>854</locationY>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
         <assignNextValueToReference>varAsset</assignNextValueToReference>
         <collectionReference>Get_Assets</collectionReference>
         <iterationOrder>Asc</iterationOrder>
@@ -219,7 +219,7 @@
     <processMetadataValues>
         <name>CanvasMode</name>
         <value>
-            <stringValue>FREE_FORM_CANVAS</stringValue>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
         </value>
     </processMetadataValues>
     <processMetadataValues>
@@ -232,8 +232,8 @@
     <recordCreates>
         <name>Create_Review_Task</name>
         <label>Create Review Task</label>
-        <locationX>842</locationX>
-        <locationY>1190</locationY>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
         <faultConnector>
             <targetReference>Log_Fault</targetReference>
         </faultConnector>
@@ -285,8 +285,8 @@
     <recordLookups>
         <name>Get_Account</name>
         <label>Get Account</label>
-        <locationX>50</locationX>
-        <locationY>182</locationY>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
         <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
         <connector>
             <targetReference>Dec_Account_Found</targetReference>
@@ -309,8 +309,8 @@
     <recordLookups>
         <name>Get_Assets</name>
         <label>Get Assets</label>
-        <locationX>50</locationX>
-        <locationY>518</locationY>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
         <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
         <connector>
             <targetReference>Sort_By_End_Date</targetReference>
@@ -338,7 +338,7 @@
         <storeOutputAutomatically>true</storeOutputAutomatically>
     </recordLookups>
     <start>
-        <locationX>50</locationX>
+        <locationX>0</locationX>
         <locationY>0</locationY>
         <connector>
             <targetReference>Get_Account</targetReference>
@@ -348,8 +348,8 @@
     <subflows>
         <name>Log_Fault</name>
         <label>Log Fault</label>
-        <locationX>314</locationX>
-        <locationY>350</locationY>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
         <flowName>AUT_Log_Flow_Error</flowName>
         <inputAssignments>
             <name>inFlowName</name>

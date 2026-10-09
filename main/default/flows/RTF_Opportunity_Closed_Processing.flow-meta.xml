@@ -3,8 +3,8 @@
     <actionCalls>
         <name>Send_Win_Email</name>
         <label>Send Win Email</label>
-        <locationX>50</locationX>
-        <locationY>1190</locationY>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
         <actionName>emailSimple</actionName>
         <actionType>emailSimple</actionType>
         <faultConnector>
@@ -35,8 +35,8 @@
     <assignments>
         <name>Asg_Close_Task</name>
         <label>Asg Close Task</label>
-        <locationX>314</locationX>
-        <locationY>854</locationY>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
         <assignmentItems>
             <assignToReference>varTask.Status</assignToReference>
             <operator>Assign</operator>
@@ -58,8 +58,8 @@
     <assignments>
         <name>Asg_Sum_Quantity</name>
         <label>Asg Sum Quantity</label>
-        <locationX>50</locationX>
-        <locationY>1022</locationY>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
         <assignmentItems>
             <assignToReference>varTotalQuantity</assignToReference>
             <operator>Add</operator>
@@ -74,8 +74,8 @@
     <decisions>
         <name>Dec_Promote_Account</name>
         <label>Dec Promote Account</label>
-        <locationX>50</locationX>
-        <locationY>518</locationY>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
         <defaultConnector>
             <targetReference>Get_Line_Items</targetReference>
         </defaultConnector>
@@ -106,8 +106,8 @@
     <decisions>
         <name>Dec_Won_Or_Lost</name>
         <label>Dec Won Or Lost</label>
-        <locationX>50</locationX>
-        <locationY>182</locationY>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
         <defaultConnector>
             <targetReference>Create_Loss_Review_Task</targetReference>
         </defaultConnector>
@@ -145,8 +145,8 @@
     <loops>
         <name>Loop_Line_Items</name>
         <label>Loop Line Items</label>
-        <locationX>50</locationX>
-        <locationY>854</locationY>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
         <assignNextValueToReference>varLineItem</assignNextValueToReference>
         <collectionReference>Get_Line_Items</collectionReference>
         <iterationOrder>Asc</iterationOrder>
@@ -160,8 +160,8 @@
     <loops>
         <name>Loop_Open_Tasks</name>
         <label>Loop Open Tasks</label>
-        <locationX>578</locationX>
-        <locationY>686</locationY>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
         <assignNextValueToReference>varTask</assignNextValueToReference>
         <collectionReference>Get_Open_Demo_Tasks</collectionReference>
         <iterationOrder>Asc</iterationOrder>
@@ -181,7 +181,7 @@
     <processMetadataValues>
         <name>CanvasMode</name>
         <value>
-            <stringValue>FREE_FORM_CANVAS</stringValue>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
         </value>
     </processMetadataValues>
     <processMetadataValues>
@@ -194,8 +194,8 @@
     <recordCreates>
         <name>Create_Loss_Review_Task</name>
         <label>Create Loss Review Task</label>
-        <locationX>314</locationX>
-        <locationY>350</locationY>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
         <connector>
             <targetReference>Get_Open_Demo_Tasks</targetReference>
         </connector>
@@ -244,8 +244,8 @@
     <recordCreates>
         <name>Create_Onboarding_Task</name>
         <label>Create Onboarding Task</label>
-        <locationX>314</locationX>
-        <locationY>1022</locationY>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
         <connector>
             <targetReference>Send_Win_Email</targetReference>
         </connector>
@@ -300,8 +300,8 @@
     <recordLookups>
         <name>Get_Account</name>
         <label>Get Account</label>
-        <locationX>50</locationX>
-        <locationY>350</locationY>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
         <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
         <connector>
             <targetReference>Dec_Promote_Account</targetReference>
@@ -324,8 +324,8 @@
     <recordLookups>
         <name>Get_Line_Items</name>
         <label>Get Line Items</label>
-        <locationX>314</locationX>
-        <locationY>686</locationY>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
         <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
         <connector>
             <targetReference>Loop_Line_Items</targetReference>
@@ -348,8 +348,8 @@
     <recordLookups>
         <name>Get_Open_Demo_Tasks</name>
         <label>Get Open Demo Tasks</label>
-        <locationX>314</locationX>
-        <locationY>518</locationY>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
         <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
         <connector>
             <targetReference>Loop_Open_Tasks</targetReference>
@@ -393,8 +393,8 @@
     <recordUpdates>
         <name>Update_Account_Type</name>
         <label>Update Account Type</label>
-        <locationX>50</locationX>
-        <locationY>686</locationY>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
         <connector>
             <targetReference>Get_Line_Items</targetReference>
         </connector>
@@ -420,15 +420,15 @@
     <recordUpdates>
         <name>Update_Open_Tasks</name>
         <label>Update Open Tasks</label>
-        <locationX>578</locationX>
-        <locationY>854</locationY>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
         <faultConnector>
             <targetReference>Log_Fault</targetReference>
         </faultConnector>
         <inputReference>colTasksToClose</inputReference>
     </recordUpdates>
     <start>
-        <locationX>50</locationX>
+        <locationX>0</locationX>
         <locationY>0</locationY>
         <connector>
             <targetReference>Dec_Won_Or_Lost</targetReference>
@@ -461,8 +461,8 @@
     <subflows>
         <name>Log_Fault</name>
         <label>Log Fault</label>
-        <locationX>578</locationX>
-        <locationY>518</locationY>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
         <flowName>AUT_Log_Flow_Error</flowName>
         <inputAssignments>
             <name>inFlowName</name>
@@ -492,8 +492,8 @@
     <subflows>
         <name>Sub_Account_Health</name>
         <label>Sub Account Health</label>
-        <locationX>314</locationX>
-        <locationY>182</locationY>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
         <flowName>AUT_Account_Health_Calculator</flowName>
         <inputAssignments>
             <name>inAccountId</name>

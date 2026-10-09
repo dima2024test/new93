@@ -4,8 +4,8 @@
     <assignments>
         <name>Asg_Followup_Count</name>
         <label>Asg Followup Count</label>
-        <locationX>578</locationX>
-        <locationY>518</locationY>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
         <assignmentItems>
             <assignToReference>varOpenFollowups</assignToReference>
             <operator>AssignCount</operator>
@@ -20,8 +20,8 @@
     <decisions>
         <name>Dec_Contact_Exists</name>
         <label>Dec Contact Exists</label>
-        <locationX>50</locationX>
-        <locationY>686</locationY>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
         <defaultConnector>
             <targetReference>Update_Lead_Cold</targetReference>
         </defaultConnector>
@@ -45,8 +45,8 @@
     <decisions>
         <name>Dec_Has_Email</name>
         <label>Dec Has Email</label>
-        <locationX>50</locationX>
-        <locationY>350</locationY>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
         <defaultConnector>
             <targetReference>Update_Lead_Cold</targetReference>
         </defaultConnector>
@@ -70,8 +70,8 @@
     <decisions>
         <name>Dec_Lead_Age</name>
         <label>Dec Lead Age</label>
-        <locationX>50</locationX>
-        <locationY>182</locationY>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
         <defaultConnectorLabel>Fresh</defaultConnectorLabel>
         <rules>
             <name>Old_Lead</name>
@@ -107,8 +107,8 @@
     <decisions>
         <name>Dec_Needs_Followup</name>
         <label>Dec Needs Followup</label>
-        <locationX>314</locationX>
-        <locationY>686</locationY>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
         <defaultConnectorLabel>Already Planned</defaultConnectorLabel>
         <rules>
             <name>Needs_Followup</name>
@@ -153,7 +153,7 @@
     <processMetadataValues>
         <name>CanvasMode</name>
         <value>
-            <stringValue>FREE_FORM_CANVAS</stringValue>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
         </value>
     </processMetadataValues>
     <processMetadataValues>
@@ -166,8 +166,8 @@
     <recordCreates>
         <name>Create_Duplicate_Note_Task</name>
         <label>Create Duplicate Note Task</label>
-        <locationX>50</locationX>
-        <locationY>1022</locationY>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
         <faultConnector>
             <targetReference>Log_Fault</targetReference>
         </faultConnector>
@@ -207,8 +207,8 @@
     <recordCreates>
         <name>Create_Followup_Task</name>
         <label>Create Followup Task</label>
-        <locationX>314</locationX>
-        <locationY>854</locationY>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
         <faultConnector>
             <targetReference>Log_Fault</targetReference>
         </faultConnector>
@@ -254,8 +254,8 @@
     <recordLookups>
         <name>Get_Matching_Contact</name>
         <label>Get Matching Contact</label>
-        <locationX>50</locationX>
-        <locationY>518</locationY>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
         <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
         <connector>
             <targetReference>Dec_Contact_Exists</targetReference>
@@ -278,8 +278,8 @@
     <recordLookups>
         <name>Get_Open_Followups</name>
         <label>Get Open Followups</label>
-        <locationX>314</locationX>
-        <locationY>350</locationY>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
         <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
         <connector>
             <targetReference>Asg_Followup_Count</targetReference>
@@ -316,8 +316,8 @@
     <recordUpdates>
         <name>Update_Lead_Closed</name>
         <label>Update Lead Closed</label>
-        <locationX>50</locationX>
-        <locationY>854</locationY>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
         <connector>
             <targetReference>Create_Duplicate_Note_Task</targetReference>
         </connector>
@@ -343,8 +343,8 @@
     <recordUpdates>
         <name>Update_Lead_Cold</name>
         <label>Update Lead Cold</label>
-        <locationX>314</locationX>
-        <locationY>518</locationY>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
         <faultConnector>
             <targetReference>Log_Fault</targetReference>
         </faultConnector>
@@ -365,7 +365,7 @@
         <object>Lead</object>
     </recordUpdates>
     <start>
-        <locationX>50</locationX>
+        <locationX>0</locationX>
         <locationY>0</locationY>
         <connector>
             <targetReference>Dec_Lead_Age</targetReference>
@@ -397,8 +397,8 @@
     <subflows>
         <name>Log_Fault</name>
         <label>Log Fault</label>
-        <locationX>842</locationX>
-        <locationY>518</locationY>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
         <flowName>AUT_Log_Flow_Error</flowName>
         <inputAssignments>
             <name>inFlowName</name>

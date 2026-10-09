@@ -3,8 +3,8 @@
     <actionCalls>
         <name>Send_Threshold_Email</name>
         <label>Send Threshold Email</label>
-        <locationX>50</locationX>
-        <locationY>1526</locationY>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
         <actionName>emailSimple</actionName>
         <actionType>emailSimple</actionType>
         <connector>
@@ -38,8 +38,8 @@
     <assignments>
         <name>Asg_Category_Action</name>
         <label>Asg Category Action</label>
-        <locationX>314</locationX>
-        <locationY>854</locationY>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
         <assignmentItems>
             <assignToReference>varCategory</assignToReference>
             <operator>Assign</operator>
@@ -54,8 +54,8 @@
     <assignments>
         <name>Asg_Category_Data</name>
         <label>Asg Category Data</label>
-        <locationX>50</locationX>
-        <locationY>854</locationY>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
         <assignmentItems>
             <assignToReference>varCategory</assignToReference>
             <operator>Assign</operator>
@@ -77,8 +77,8 @@
     <assignments>
         <name>Asg_Category_Other</name>
         <label>Asg Category Other</label>
-        <locationX>578</locationX>
-        <locationY>854</locationY>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
         <assignmentItems>
             <assignToReference>varCategory</assignToReference>
             <operator>Assign</operator>
@@ -93,8 +93,8 @@
     <assignments>
         <name>Asg_Recent_Count</name>
         <label>Asg Recent Count</label>
-        <locationX>50</locationX>
-        <locationY>1190</locationY>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
         <assignmentItems>
             <assignToReference>varRecentCount</assignToReference>
             <operator>AssignCount</operator>
@@ -109,8 +109,8 @@
     <assignments>
         <name>Asg_Unknown_User</name>
         <label>Asg Unknown User</label>
-        <locationX>314</locationX>
-        <locationY>518</locationY>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
         <assignmentItems>
             <assignToReference>varUserLabel</assignToReference>
             <operator>Assign</operator>
@@ -125,8 +125,8 @@
     <assignments>
         <name>Asg_User_Context</name>
         <label>Asg User Context</label>
-        <locationX>50</locationX>
-        <locationY>518</locationY>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
         <assignmentItems>
             <assignToReference>varUserLabel</assignToReference>
             <operator>Assign</operator>
@@ -148,8 +148,8 @@
     <decisions>
         <name>Dec_Error_Type</name>
         <label>Dec Error Type</label>
-        <locationX>50</locationX>
-        <locationY>686</locationY>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
         <defaultConnector>
             <targetReference>Asg_Category_Other</targetReference>
         </defaultConnector>
@@ -188,8 +188,8 @@
     <decisions>
         <name>Dec_Threshold</name>
         <label>Dec Threshold</label>
-        <locationX>50</locationX>
-        <locationY>1358</locationY>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
         <defaultConnector>
             <targetReference>Sub_Log_Flow_Error</targetReference>
         </defaultConnector>
@@ -213,8 +213,8 @@
     <decisions>
         <name>Dec_User_Found</name>
         <label>Dec User Found</label>
-        <locationX>50</locationX>
-        <locationY>350</locationY>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
         <defaultConnector>
             <targetReference>Asg_Unknown_User</targetReference>
         </defaultConnector>
@@ -274,7 +274,7 @@
     <processMetadataValues>
         <name>CanvasMode</name>
         <value>
-            <stringValue>FREE_FORM_CANVAS</stringValue>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
         </value>
     </processMetadataValues>
     <processMetadataValues>
@@ -287,8 +287,8 @@
     <recordCreates>
         <name>Log_Fault</name>
         <label>Log Fault</label>
-        <locationX>314</locationX>
-        <locationY>350</locationY>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
         <inputAssignments>
             <field>ActivityDate</field>
             <value>
@@ -325,8 +325,8 @@
     <recordCreates>
         <name>Sub_Log_Flow_Error</name>
         <label>Sub Log Flow Error</label>
-        <locationX>314</locationX>
-        <locationY>1526</locationY>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
         <faultConnector>
             <targetReference>Log_Fault</targetReference>
         </faultConnector>
@@ -372,8 +372,8 @@
     <recordLookups>
         <name>Get_Interview_User</name>
         <label>Get Interview User</label>
-        <locationX>50</locationX>
-        <locationY>182</locationY>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
         <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
         <connector>
             <targetReference>Dec_User_Found</targetReference>
@@ -396,8 +396,8 @@
     <recordLookups>
         <name>Get_Recent_Error_Logs</name>
         <label>Get Recent Error Logs</label>
-        <locationX>50</locationX>
-        <locationY>1022</locationY>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
         <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
         <connector>
             <targetReference>Asg_Recent_Count</targetReference>
@@ -432,7 +432,7 @@
         <storeOutputAutomatically>true</storeOutputAutomatically>
     </recordLookups>
     <start>
-        <locationX>50</locationX>
+        <locationX>0</locationX>
         <locationY>0</locationY>
         <connector>
             <targetReference>Get_Interview_User</targetReference>

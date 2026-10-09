@@ -3,8 +3,8 @@
     <actionCalls>
         <name>Send_Dominant_Email</name>
         <label>Send Dominant Email</label>
-        <locationX>314</locationX>
-        <locationY>1526</locationY>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
         <actionName>emailSimple</actionName>
         <actionType>emailSimple</actionType>
         <connector>
@@ -38,8 +38,8 @@
     <assignments>
         <name>Asg_Add_Total</name>
         <label>Asg Add Total</label>
-        <locationX>50</locationX>
-        <locationY>1358</locationY>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
         <assignmentItems>
             <assignToReference>varTotal</assignToReference>
             <operator>Add</operator>
@@ -54,8 +54,8 @@
     <assignments>
         <name>Asg_Mine</name>
         <label>Asg Mine</label>
-        <locationX>50</locationX>
-        <locationY>1694</locationY>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
         <assignmentItems>
             <assignToReference>varMine</assignToReference>
             <operator>Assign</operator>
@@ -70,8 +70,8 @@
     <decisions>
         <name>Dec_Dominant</name>
         <label>Dec Dominant</label>
-        <locationX>314</locationX>
-        <locationY>1358</locationY>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
         <defaultConnector>
             <targetReference>Sub_Log_Flow_Error</targetReference>
         </defaultConnector>
@@ -95,8 +95,8 @@
     <decisions>
         <name>Dec_Is_Mine</name>
         <label>Dec Is Mine</label>
-        <locationX>50</locationX>
-        <locationY>1526</locationY>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
         <defaultConnector>
             <targetReference>Loop_Ns_Stats</targetReference>
         </defaultConnector>
@@ -120,8 +120,8 @@
     <decisions>
         <name>Dec_Stats_Exists</name>
         <label>Dec Stats Exists</label>
-        <locationX>50</locationX>
-        <locationY>686</locationY>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
         <defaultConnector>
             <targetReference>Create_Ns_Stats</targetReference>
         </defaultConnector>
@@ -195,8 +195,8 @@
     <loops>
         <name>Loop_Ns_Stats</name>
         <label>Loop Ns Stats</label>
-        <locationX>50</locationX>
-        <locationY>1190</locationY>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
         <assignNextValueToReference>varStat</assignNextValueToReference>
         <collectionReference>Get_All_Ns_Stats</collectionReference>
         <iterationOrder>Asc</iterationOrder>
@@ -216,7 +216,7 @@
     <processMetadataValues>
         <name>CanvasMode</name>
         <value>
-            <stringValue>FREE_FORM_CANVAS</stringValue>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
         </value>
     </processMetadataValues>
     <processMetadataValues>
@@ -229,8 +229,8 @@
     <recordCreates>
         <name>Create_Ns_Stats</name>
         <label>Create Ns Stats</label>
-        <locationX>314</locationX>
-        <locationY>854</locationY>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
         <connector>
             <targetReference>Get_All_Ns_Stats</targetReference>
         </connector>
@@ -279,8 +279,8 @@
     <recordCreates>
         <name>Log_Fault</name>
         <label>Log Fault</label>
-        <locationX>314</locationX>
-        <locationY>350</locationY>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
         <inputAssignments>
             <field>ActivityDate</field>
             <value>
@@ -317,8 +317,8 @@
     <recordCreates>
         <name>Sub_Log_Flow_Error</name>
         <label>Sub Log Flow Error</label>
-        <locationX>578</locationX>
-        <locationY>1526</locationY>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
         <faultConnector>
             <targetReference>Log_Fault</targetReference>
         </faultConnector>
@@ -364,8 +364,8 @@
     <recordLookups>
         <name>Get_Admin_Profile</name>
         <label>Get Admin Profile</label>
-        <locationX>50</locationX>
-        <locationY>182</locationY>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
         <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
         <connector>
             <targetReference>Get_Admin_User</targetReference>
@@ -388,8 +388,8 @@
     <recordLookups>
         <name>Get_Admin_User</name>
         <label>Get Admin User</label>
-        <locationX>50</locationX>
-        <locationY>350</locationY>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
         <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
         <connector>
             <targetReference>Get_Ns_Stats</targetReference>
@@ -421,8 +421,8 @@
     <recordLookups>
         <name>Get_All_Ns_Stats</name>
         <label>Get All Ns Stats</label>
-        <locationX>50</locationX>
-        <locationY>1022</locationY>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
         <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
         <connector>
             <targetReference>Loop_Ns_Stats</targetReference>
@@ -452,8 +452,8 @@
     <recordLookups>
         <name>Get_Ns_Stats</name>
         <label>Get Ns Stats</label>
-        <locationX>50</locationX>
-        <locationY>518</locationY>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
         <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
         <connector>
             <targetReference>Dec_Stats_Exists</targetReference>
@@ -483,8 +483,8 @@
     <recordUpdates>
         <name>Update_Ns_Stats</name>
         <label>Update Ns Stats</label>
-        <locationX>50</locationX>
-        <locationY>854</locationY>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
         <connector>
             <targetReference>Get_All_Ns_Stats</targetReference>
         </connector>
@@ -514,7 +514,7 @@
         <object>Task</object>
     </recordUpdates>
     <start>
-        <locationX>50</locationX>
+        <locationX>0</locationX>
         <locationY>0</locationY>
         <connector>
             <targetReference>Get_Admin_Profile</targetReference>

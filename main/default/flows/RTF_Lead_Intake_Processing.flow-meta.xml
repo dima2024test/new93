@@ -3,8 +3,8 @@
     <actionCalls>
         <name>Send_Duplicate_Email</name>
         <label>Send Duplicate Email</label>
-        <locationX>50</locationX>
-        <locationY>1190</locationY>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
         <actionName>emailSimple</actionName>
         <actionType>emailSimple</actionType>
         <faultConnector>
@@ -35,8 +35,8 @@
     <assignments>
         <name>Asg_Duplicate_Counts</name>
         <label>Asg Duplicate Counts</label>
-        <locationX>50</locationX>
-        <locationY>686</locationY>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
         <assignmentItems>
             <assignToReference>varDuplicateLeads</assignToReference>
             <operator>AssignCount</operator>
@@ -58,8 +58,8 @@
     <assignments>
         <name>Asg_Standard_SLA</name>
         <label>Asg Standard SLA</label>
-        <locationX>578</locationX>
-        <locationY>350</locationY>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
         <assignmentItems>
             <assignToReference>varSlaDays</assignToReference>
             <operator>Assign</operator>
@@ -74,8 +74,8 @@
     <decisions>
         <name>Dec_Duplicate_Found</name>
         <label>Dec Duplicate Found</label>
-        <locationX>50</locationX>
-        <locationY>854</locationY>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
         <defaultConnectorLabel>Unique</defaultConnectorLabel>
         <rules>
             <name>Duplicate</name>
@@ -103,8 +103,8 @@
     <decisions>
         <name>Dec_Has_Email</name>
         <label>Dec Has Email</label>
-        <locationX>314</locationX>
-        <locationY>182</locationY>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
         <defaultConnectorLabel>No Email</defaultConnectorLabel>
         <rules>
             <name>Email_Present</name>
@@ -125,8 +125,8 @@
     <decisions>
         <name>Dec_Lead_Source</name>
         <label>Dec Lead Source</label>
-        <locationX>50</locationX>
-        <locationY>182</locationY>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
         <defaultConnector>
             <targetReference>Asg_Standard_SLA</targetReference>
         </defaultConnector>
@@ -165,8 +165,8 @@
     <decisions>
         <name>Dec_Still_Untouched</name>
         <label>Dec Still Untouched</label>
-        <locationX>1106</locationX>
-        <locationY>350</locationY>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
         <defaultConnectorLabel>Being Worked</defaultConnectorLabel>
         <rules>
             <name>Untouched</name>
@@ -213,7 +213,7 @@
     <processMetadataValues>
         <name>CanvasMode</name>
         <value>
-            <stringValue>FREE_FORM_CANVAS</stringValue>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
         </value>
     </processMetadataValues>
     <processMetadataValues>
@@ -226,8 +226,8 @@
     <recordCreates>
         <name>Create_Duplicate_Task</name>
         <label>Create Duplicate Task</label>
-        <locationX>50</locationX>
-        <locationY>1022</locationY>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
         <connector>
             <targetReference>Send_Duplicate_Email</targetReference>
         </connector>
@@ -276,8 +276,8 @@
     <recordCreates>
         <name>Create_Fast_Followup_Task</name>
         <label>Create Fast Followup Task</label>
-        <locationX>50</locationX>
-        <locationY>350</locationY>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
         <faultConnector>
             <targetReference>Log_Fault</targetReference>
         </faultConnector>
@@ -323,8 +323,8 @@
     <recordCreates>
         <name>Create_Partner_Task</name>
         <label>Create Partner Task</label>
-        <locationX>314</locationX>
-        <locationY>350</locationY>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
         <faultConnector>
             <targetReference>Log_Fault</targetReference>
         </faultConnector>
@@ -370,8 +370,8 @@
     <recordCreates>
         <name>Create_Reminder_Task</name>
         <label>Create Reminder Task</label>
-        <locationX>314</locationX>
-        <locationY>686</locationY>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
         <faultConnector>
             <targetReference>Log_Fault</targetReference>
         </faultConnector>
@@ -417,8 +417,8 @@
     <recordCreates>
         <name>Create_Standard_Task</name>
         <label>Create Standard Task</label>
-        <locationX>50</locationX>
-        <locationY>518</locationY>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
         <faultConnector>
             <targetReference>Log_Fault</targetReference>
         </faultConnector>
@@ -464,8 +464,8 @@
     <recordLookups>
         <name>Get_Duplicate_Leads</name>
         <label>Get Duplicate Leads</label>
-        <locationX>842</locationX>
-        <locationY>350</locationY>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
         <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
         <connector>
             <targetReference>Get_Matching_Contacts</targetReference>
@@ -502,8 +502,8 @@
     <recordLookups>
         <name>Get_Lead_Current</name>
         <label>Get Lead Current</label>
-        <locationX>578</locationX>
-        <locationY>182</locationY>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
         <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
         <connector>
             <targetReference>Dec_Still_Untouched</targetReference>
@@ -526,8 +526,8 @@
     <recordLookups>
         <name>Get_Matching_Contacts</name>
         <label>Get Matching Contacts</label>
-        <locationX>314</locationX>
-        <locationY>518</locationY>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
         <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
         <connector>
             <targetReference>Asg_Duplicate_Counts</targetReference>
@@ -550,8 +550,8 @@
     <recordUpdates>
         <name>Update_Lead_Rating</name>
         <label>Update Lead Rating</label>
-        <locationX>578</locationX>
-        <locationY>518</locationY>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
         <connector>
             <targetReference>Create_Reminder_Task</targetReference>
         </connector>
@@ -575,7 +575,7 @@
         <object>Lead</object>
     </recordUpdates>
     <start>
-        <locationX>50</locationX>
+        <locationX>0</locationX>
         <locationY>0</locationY>
         <connector>
             <targetReference>Dec_Lead_Source</targetReference>
@@ -604,8 +604,8 @@
     <subflows>
         <name>Log_Fault</name>
         <label>Log Fault</label>
-        <locationX>1370</locationX>
-        <locationY>350</locationY>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
         <flowName>AUT_Log_Flow_Error</flowName>
         <inputAssignments>
             <name>inFlowName</name>

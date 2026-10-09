@@ -3,8 +3,8 @@
     <actionCalls>
         <name>Send_Case_Email</name>
         <label>Send Case Email</label>
-        <locationX>50</locationX>
-        <locationY>1862</locationY>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
         <actionName>emailSimple</actionName>
         <actionType>emailSimple</actionType>
         <faultConnector>
@@ -35,8 +35,8 @@
     <assignments>
         <name>Asg_Append_Occurrence</name>
         <label>Asg Append Occurrence</label>
-        <locationX>50</locationX>
-        <locationY>1190</locationY>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
         <assignmentItems>
             <assignToReference>varCase.Description</assignToReference>
             <operator>Assign</operator>
@@ -65,8 +65,8 @@
     <assignments>
         <name>Asg_Build_Subject</name>
         <label>Asg Build Subject</label>
-        <locationX>50</locationX>
-        <locationY>182</locationY>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
         <assignmentItems>
             <assignToReference>varSubject</assignToReference>
             <operator>Assign</operator>
@@ -81,8 +81,8 @@
     <assignments>
         <name>Asg_Existing_Count</name>
         <label>Asg Existing Count</label>
-        <locationX>50</locationX>
-        <locationY>518</locationY>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
         <assignmentItems>
             <assignToReference>varExistingCount</assignToReference>
             <operator>AssignCount</operator>
@@ -97,8 +97,8 @@
     <assignments>
         <name>Asg_Priority_High</name>
         <label>Asg Priority High</label>
-        <locationX>578</locationX>
-        <locationY>1022</locationY>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
         <assignmentItems>
             <assignToReference>varPriority</assignToReference>
             <operator>Assign</operator>
@@ -113,8 +113,8 @@
     <assignments>
         <name>Asg_Priority_Medium</name>
         <label>Asg Priority Medium</label>
-        <locationX>314</locationX>
-        <locationY>1022</locationY>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
         <assignmentItems>
             <assignToReference>varPriority</assignToReference>
             <operator>Assign</operator>
@@ -130,8 +130,8 @@
         <name>Sort_Newest_First</name>
         <elementSubtype>SortCollectionProcessor</elementSubtype>
         <label>Sort Newest First</label>
-        <locationX>50</locationX>
-        <locationY>854</locationY>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
         <collectionProcessorType>SortCollectionProcessor</collectionProcessorType>
         <collectionReference>Get_Existing_Cases</collectionReference>
         <connector>
@@ -147,8 +147,8 @@
     <decisions>
         <name>Dec_Admin_Found</name>
         <label>Dec Admin Found</label>
-        <locationX>50</locationX>
-        <locationY>1526</locationY>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
         <defaultConnector>
             <targetReference>Log_Fault</targetReference>
         </defaultConnector>
@@ -172,8 +172,8 @@
     <decisions>
         <name>Dec_Case_Exists</name>
         <label>Dec Case Exists</label>
-        <locationX>50</locationX>
-        <locationY>686</locationY>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
         <defaultConnector>
             <targetReference>Dec_Case_Priority</targetReference>
         </defaultConnector>
@@ -197,8 +197,8 @@
     <decisions>
         <name>Dec_Case_Priority</name>
         <label>Dec Case Priority</label>
-        <locationX>314</locationX>
-        <locationY>854</locationY>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
         <defaultConnector>
             <targetReference>Asg_Priority_High</targetReference>
         </defaultConnector>
@@ -240,8 +240,8 @@
     <loops>
         <name>Loop_Existing_Cases</name>
         <label>Loop Existing Cases</label>
-        <locationX>50</locationX>
-        <locationY>1022</locationY>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
         <assignNextValueToReference>varCase</assignNextValueToReference>
         <collectionReference>Get_Existing_Cases</collectionReference>
         <iterationOrder>Asc</iterationOrder>
@@ -261,7 +261,7 @@
     <processMetadataValues>
         <name>CanvasMode</name>
         <value>
-            <stringValue>FREE_FORM_CANVAS</stringValue>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
         </value>
     </processMetadataValues>
     <processMetadataValues>
@@ -274,8 +274,8 @@
     <recordCreates>
         <name>Create_Case</name>
         <label>Create Case</label>
-        <locationX>50</locationX>
-        <locationY>1694</locationY>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
         <assignRecordIdToReference>varNewCaseId</assignRecordIdToReference>
         <connector>
             <targetReference>Send_Case_Email</targetReference>
@@ -324,8 +324,8 @@
     <recordCreates>
         <name>Log_Fault</name>
         <label>Log Fault</label>
-        <locationX>314</locationX>
-        <locationY>518</locationY>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
         <inputAssignments>
             <field>ActivityDate</field>
             <value>
@@ -362,8 +362,8 @@
     <recordLookups>
         <name>Get_Admin_Profile</name>
         <label>Get Admin Profile</label>
-        <locationX>578</locationX>
-        <locationY>1190</locationY>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
         <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
         <connector>
             <targetReference>Get_Admin_User</targetReference>
@@ -386,8 +386,8 @@
     <recordLookups>
         <name>Get_Admin_User</name>
         <label>Get Admin User</label>
-        <locationX>50</locationX>
-        <locationY>1358</locationY>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
         <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
         <connector>
             <targetReference>Dec_Admin_Found</targetReference>
@@ -419,8 +419,8 @@
     <recordLookups>
         <name>Get_Existing_Cases</name>
         <label>Get Existing Cases</label>
-        <locationX>50</locationX>
-        <locationY>350</locationY>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
         <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
         <connector>
             <targetReference>Asg_Existing_Count</targetReference>
@@ -450,15 +450,15 @@
     <recordUpdates>
         <name>Update_Existing_Cases</name>
         <label>Update Existing Cases</label>
-        <locationX>314</locationX>
-        <locationY>1190</locationY>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
         <faultConnector>
             <targetReference>Log_Fault</targetReference>
         </faultConnector>
         <inputReference>colCasesToUpdate</inputReference>
     </recordUpdates>
     <start>
-        <locationX>50</locationX>
+        <locationX>0</locationX>
         <locationY>0</locationY>
         <connector>
             <targetReference>Asg_Build_Subject</targetReference>
